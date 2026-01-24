@@ -1,0 +1,21 @@
+# coverage
+coverage/
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variable files
+.env
+.env.local
+
+# Misc files
+.DS_Store
+.todo.md
+
+# Build outputs
+dist/
+src/generated/
+
+# Logs
+logs/
+.playwright-mcp/

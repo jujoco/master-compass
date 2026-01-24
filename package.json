@@ -1,0 +1,32 @@
+{
+	"name": "master-compass",
+	"description": "An interactive organizational navigation tool built to end the blame game and create real ownership.",
+	"version": "1.0.0",
+	"author": "Julian Cobos",
+	"packageManager": "pnpm@10.28.2",
+	"license": "MIT",
+	"engines": {
+		"node": ">=24.0.0",
+		"pnpm": ">=10.0.0"
+	},
+	"type": "module",
+	"main": "./src/index.js",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"d3": "7.9.0",
+		"marked": "^17.0.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.2",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.7",
+		"vite": "^7.3.1"
+	},
+	"lint-staged": {
+		"*.{js,ts,tsx,json,css,md}": "biome check --write --no-errors-on-unmatched"
+	}
+}

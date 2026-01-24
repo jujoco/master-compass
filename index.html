@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="jujoco" />
+  <meta name="keywords" content="organization, hierarchy, visualization" />
+  <meta name="description"
+    content="Interactive circle packing visualization of the organization's hierarchical structure." />
+  <title>Master Compass</title>
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <!-- Info Panel -->
+    <div class="info-panel">
+      <h1>Master Compass</h1>
+      <p>
+        This interactive circle packing visualization displays the hierarchical structure of the company organization.
+        Each circle represents a node in the hierarchy.
+      </p>
+      <p>
+        <strong>Views Available:</strong>
+      </p>
+      <ul class="info-list info-list--views">
+        <li>Client > Products > Features > Technology > Owner</li>
+        <li>Region > Domain > Team</li>
+      </ul>
+      <p>
+        <strong>How to navigate:</strong>
+      </p>
+      <ul class="info-list">
+        <li>Switch between views using the tabs at the top</li>
+        <li>Click on any circle to zoom into that section</li>
+        <li>Click on the background to zoom back out to the root</li>
+        <li>Click on nodes in the tree below to navigate</li>
+      </ul>
+
+      <div class="tree-view-section">
+        <h3>Hierarchy</h3>
+        <div id="treeView" class="tree-view"></div>
+      </div>
+
+      <div class="documentation-link-section">
+        <h3>Documentation</h3>
+        <ul class="info-list">
+          <li><a href="#" id="viewDocsLink" class="docs-link">View Full Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Visualization Panel -->
+    <div class="viz-panel">
+      <!-- Tabs -->
+      <div class="tabs-container">
+        <button class="tab active" data-view="view-1">Product/Feature View</button>
+        <button class="tab" data-view="view-2">Domain/Service/Team View</button>
+      </div>
+
+      <!-- Visualization canvas -->
+      <div class="viz-canvas">
+        <svg class="viz-content"></svg>
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="./src/index.js"></script>
+</body>
+
+</html>
